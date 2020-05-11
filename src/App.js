@@ -1,5 +1,7 @@
 import React, {useState, useEffect} from 'react';
 import './App.css';
+import AppOne from './AppOne'
+import AppTwo from './AppTwo'
 
 function App() {
   const [count, setCount] = useState(0);
@@ -15,13 +17,10 @@ function App() {
   useEffect(() => {
     console.log("componentDidMount")
     setEffectCount(effectCount + 100)
-  }, []);
-  useEffect(() => {
-    return() => {console.log("componentDidUnmount")}
   }, []);  
   return (
     <div>
-    {active ? <h1>SHOW</h1> : 
+    {active ? <AppOne/>: <AppTwo/>}
       <div>
       <h1>u Have Clicked it {effectCount} times</h1>
       <p>{count}</p>
@@ -31,7 +30,7 @@ function App() {
       <button onClick={() => setCount(count - 1)}>
         -----
       </button>
-      </div>}
+      </div>
       <button onClick={() => setActive(!active)}>
         toggle
       </button>
