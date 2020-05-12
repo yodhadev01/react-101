@@ -1,7 +1,10 @@
 import React from 'react'
 import { connect } from 'react-redux'
-import { addTodo } from '../actions'
+import { addTodo } from '../actions'//will fetch index.js file if no file specified
 
+
+/*if connect method doesnt contain mapStateToProps, mapDispatchToProps 
+then default args recived in function is dispatch*/ 
 const AddTodo = ({ dispatch }) => {
   let input
 

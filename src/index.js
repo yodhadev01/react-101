@@ -2,7 +2,7 @@ import React from 'react'
 import { render } from 'react-dom'
 import { Provider } from 'react-redux'
 import { createStore } from 'redux'
-import rootReducer from './reducers'
+import rootReducer from './reducers'//will fetch index.js file if no file specified
 import App from './components/App'
 import * as serviceWorker from './serviceWorker';
 
