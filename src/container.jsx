@@ -3,7 +3,9 @@ import UserInput from './userInput';
 import UserOutput from './userOutput';
 
 var Container = () => {
-    
+
+    const [userName, setUserName] = useState({"username":"Sagar"});
+
     return(
         <React.Fragment>
             <UserInput/>
