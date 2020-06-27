@@ -1,9 +1,9 @@
 import React from 'react';
 
-var userInput = () => {
+var userInput = (props) => {
 
     return(
-        <h1>hello!</h1>
+        <input onChange={props.updateUserName} value={props.userName}/>
     )
 }
 export default userInput;

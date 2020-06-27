@@ -4,12 +4,15 @@ import UserOutput from './userOutput';
 
 var Container = () => {
 
-    const [userName, setUserName] = useState({"username":"Sagar"});
+    const [userName, setUserName] = useState({"value":"Sagar"});
 
+    let handleOnChange = (e) => {
+        setUserName({"value": e.target.value})
+    }
     return(
         <React.Fragment>
-            <UserInput/>
-            <UserOutput/>
+            <UserInput updateUserName={handleOnChange} userName={userName.value} />
+            <UserOutput userName={userName.value}/>
         </React.Fragment>
     )
 }
