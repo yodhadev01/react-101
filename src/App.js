@@ -1,4 +1,4 @@
-import React, {Component} from 'react';
+import React, {Component, PureComponent} from 'react';
 
 
 class App extends Component{
@@ -36,7 +36,11 @@ class App extends Component{
     console.log('[App.js] componentDidMount');
   }
 
-  // it run before render and return Boolean (everytime)
+  /* it run before render and return Boolean (everytime)
+  if u use PureComponent in place of Component in extent of this class so react will
+  so react will automaticaly implement shouldComponentUpdate and check nextProps with
+  this.props and if found any value differ then only it will allow to render class 
+  */
   shouldComponentUpdate(nextProps, nextState) {
     console.log('[App.js] shouldComponentUpdate');
     return true;
